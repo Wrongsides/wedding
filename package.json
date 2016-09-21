@@ -1,0 +1,28 @@
+{
+  "name": "wedding",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Wrongsides/wedding.git"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "bower": "1.5.1",
+    "grunt-cli": "0.1.13",
+    "grunt": "0.4.1",
+    "grunt-karma": "0.12.1",
+    "karma-cli": "0.1.0",
+    "karma": "0.13",
+    "karma-jasmine": "0.2.0",
+    "karma-phantomjs-launcher": "0.2.1",
+    "karma-coverage": "0.5.2",
+    "karma-ng-html2js-preprocessor": "0.2.0"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "postinstall": "git config url.\"https://\".insteadOf git://",
+    "build:sass": "node-sass --output-style compressed src/main/resources/public/sass/wedding.scss src/main/resources/public/styles/wedding.css"
+  }
+}
