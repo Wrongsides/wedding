@@ -1,7 +1,7 @@
 # wedding
 
-To build run:
+To build run:  
 
-npm install
-bower install
-./gradlew build run
+npm install  
+bower install  
+./gradlew bootRun
