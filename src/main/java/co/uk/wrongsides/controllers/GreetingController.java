@@ -9,9 +9,10 @@ import java.util.Map;
 import java.util.UUID;
 
 @RestController
+@RequestMapping("/api/greeting")
 public class GreetingController {
 
-    @RequestMapping(value = "/greeting", method = RequestMethod.GET)
+    @RequestMapping(method = RequestMethod.GET, produces = "application/json")
     public Map<String,Object> getGreeting() {
         Map<String,Object> greeting = new HashMap<String,Object>();
         greeting.put("id", UUID.randomUUID().toString());

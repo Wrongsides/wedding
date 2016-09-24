@@ -13,7 +13,7 @@ angular.module('greeting', [ 'ngRoute' ])
 
     })
     .controller('greeting', ['$scope', '$http', function($scope, $http) {
-        $http.get('/greeting/').success(function(data) {
+        $http.get('/api/greeting/').success(function(data) {
             $scope.greeting = data;
         })
     }])
@@ -27,7 +27,7 @@ angular.module('greeting', [ 'ngRoute' ])
                 + btoa(credentials.username + ":" + credentials.password)
                 } : {};
 
-                $http.get('user', {headers : headers}).success(function(data) {
+                $http.get('api/authenticate/user', {headers : headers}).success(function(data) {
                     if (data.name) {
                         $rootScope.authenticated = true;
                     } else {

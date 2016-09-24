@@ -5,7 +5,7 @@ import java.util.List;
 
 public enum OpenResources {
 
-    authController("/user"),
+    authController("/api/authenticate/user"),
     bowerComponents("/bower_components/**"),
     weddingPackage("/wedding/**"),
     indexPage("/index.html"),
