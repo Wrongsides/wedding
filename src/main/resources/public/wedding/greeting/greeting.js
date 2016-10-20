@@ -2,10 +2,10 @@ angular.module('greeting', [ 'ngRoute' ])
     .config(function($routeProvider, $httpProvider) {
 
         $routeProvider.when('/', {
-            templateUrl : 'home.html',
+            templateUrl : 'wedding/greeting/greeting.html',
             controller : 'greeting'
         }).when('/login', {
-            templateUrl : 'login.html',
+            templateUrl : 'wedding/login/login.html',
             controller : 'navigation'
         }).otherwise('/');
 

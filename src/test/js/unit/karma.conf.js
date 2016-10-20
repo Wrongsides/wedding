@@ -14,8 +14,12 @@ module.exports = function (config) {
             'src/main/resources/public/bower_components/angular/angular.min.js',
             'src/main/resources/public/bower_components/jquery/dist/jquery.min.js',
             'src/main/resources/public/bower_components/bootstrap/dist/js/bootstrap.min.js',
+            'src/main/resources/public/bower_components/angular-route/angular-route.min.js',
+            'src/main/resources/public/bower_components/angular-mocks/angular-mocks.js',
 
-            'src/main/resources/public/js/greeting.js',
+            'src/main/resources/public/wedding/app.js',
+            'src/main/resources/public/wedding/greeting/greeting.js',
+            'src/main/resources/public/wedding/login/test.js',
 
             'src/test/js/unit/**/*-spec.js'
         ],
@@ -30,12 +34,12 @@ module.exports = function (config) {
         // preprocess matching files before serving them to the browser
         // available preprocessors: https://npmjs.org/browse/keyword/node_modules-preprocessor
         preprocessors: {
-            'src/main/resources/public/scripts/**/*.js': ['coverage']
+            'src/main/resources/public/wedding/**/*.js': ['coverage']
         },
 
         ngHtml2JsPreprocessor: {
-            stripPrefix: 'src/main/resources/public/',
-            moduleName: 'wedding'
+            stripPrefix: 'src/main/resources/public/wedding',
+            moduleName: 'weddingApp'
         },
 
         // list of files to exclude
@@ -51,7 +55,7 @@ module.exports = function (config) {
 
         coverageReporter: {
             type: 'html',
-            dir: 'target/coverage/'
+            dir: 'build/reports/karma/'
         },
 
         // web server port

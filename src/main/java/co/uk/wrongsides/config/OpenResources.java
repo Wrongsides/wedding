@@ -8,9 +8,8 @@ public enum OpenResources {
     authController("/api/authenticate/user"),
     bowerComponents("/bower_components/**"),
     weddingPackage("/wedding/**"),
-    indexPage("/index.html"),
-    loginComponent("/login.html"),
-    homeComponent("/home.html");
+    images("/images/**"),
+    indexPage("/index.html");
 
     private final String path;
 

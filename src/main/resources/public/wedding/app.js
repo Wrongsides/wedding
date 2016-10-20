@@ -1,1 +1,1 @@
-angular.module('weddingApp', ['greeting'])
+angular.module('weddingApp', ['greeting']);

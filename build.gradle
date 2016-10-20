@@ -14,7 +14,6 @@ buildscript {
 }
 
 apply plugin: 'java'
-apply plugin: 'eclipse'
 apply plugin: 'spring-boot'
 apply plugin: 'org.flywaydb.flyway'
 
@@ -38,12 +37,17 @@ dependencies {
 	compile('org.springframework.boot:spring-boot-starter-security')
 	compile('org.springframework.boot:spring-boot-starter-social-facebook')
 	compile('org.springframework.boot:spring-boot-starter-web')
-	runtime('mysql:mysql-connector-java')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
-	testCompile 'org.assertj:assertj-core:3.5.2'
+	testCompile('org.assertj:assertj-core:3.5.2')
 }
 
 flyway {
-	url = 'jdbc:h2:file:./target/localdb'
+	url = 'jdbc:h2:file:./build/localdb'
 	user = 'sa'
 }
+
+task karma(type:Exec){
+	commandLine 'grunt', 'karma:singleRun'
+}
+
+test.dependsOn karma
