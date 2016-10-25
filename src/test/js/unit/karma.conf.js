@@ -19,7 +19,7 @@ module.exports = function (config) {
 
             'src/main/resources/public/wedding/app.js',
             'src/main/resources/public/wedding/greeting/greeting.js',
-            'src/main/resources/public/wedding/login/test.js',
+            'src/main/resources/public/wedding/navigation/navigation.js',
 
             'src/test/js/unit/**/*-spec.js'
         ],

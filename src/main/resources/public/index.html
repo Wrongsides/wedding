@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-    <title>Hello AngularJS</title>
+    <title>Our Wedding</title>
     <link href="bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
     <link href="wedding/css/wedding.css" rel="stylesheet">
     <style type="text/css">
@@ -10,7 +10,9 @@
         }
     </style>
 </head>
+
 <body ng-app="weddingApp">
+
 <div ng-controller="navigation" class="container">
     <ul class="nav nav-pills" role="tablist">
         <li class="active"><a href="#/">Greeting</a></li>
@@ -18,6 +20,7 @@
         <li ng-show="authenticated"><a href="" ng-click="logout()">Logout</a></li>
     </ul>
 </div>
+
 <div ng-view class="container"></div>
 
 <script src="bower_components/jquery/dist/jquery.min.js"></script>
@@ -25,6 +28,7 @@
 <script src="bower_components/angular-route/angular-route.min.js"></script>
 <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="wedding/app.js"></script>
+<script src="wedding/navigation/navigation.js"></script>
 <script src="wedding/greeting/greeting.js"></script>
 </body>
 </html>
