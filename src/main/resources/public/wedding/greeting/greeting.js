@@ -1,11 +1,16 @@
-function GreetingDetailController() {
+angular.module('weddingApp')
 
-}
+    .component('greeting', {
+        templateUrl: 'wedding/greeting/greeting.html',
+        bindings: {
+            greeting: '='
+        }
+    })
 
-angular.module('weddingApp').component('greetingDetail', {
-    templateUrl: 'wedding/greeting/greetingDetail.html',
-    controller: GreetingDetailController,
-    bindings: {
-        greeting: '='
-    }
-});
+    .controller('greeting', function($http){
+        var ctrl = this;
+        ctrl.greeting = {};
+        $http.get("/api/greeting") .success(function(response) {
+            ctrl.greeting = response;
+        });
+    });

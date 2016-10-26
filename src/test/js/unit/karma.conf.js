@@ -18,8 +18,9 @@ module.exports = function (config) {
             'src/main/resources/public/bower_components/angular-mocks/angular-mocks.js',
 
             'src/main/resources/public/wedding/app.js',
-            'src/main/resources/public/wedding/greeting/greeting.js',
             'src/main/resources/public/wedding/navigation/navigation.js',
+            'src/main/resources/public/wedding/login/login.js',
+            'src/main/resources/public/wedding/greeting/greeting.js',
 
             'src/test/js/unit/**/*-spec.js'
         ],

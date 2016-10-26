@@ -4,7 +4,8 @@
 </div>
 
 <div ng-show="authenticated">
-<greeting-detail greeting="ctrl.greeting"></greeting-detail>
+    <p>The ID is {{ctrl.greeting.id}}</p>
+    <p>The content is {{ctrl.greeting.content}}</p>
 </div>
 <div ng-show="!authenticated">
     <p>Login to check the date</p>

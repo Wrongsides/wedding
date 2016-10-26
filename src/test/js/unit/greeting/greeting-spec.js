@@ -9,7 +9,7 @@ describe('component: greetingDetail', function() {
 
     it('should expose a `greeting` object', function() {
         var bindings = { greeting: { id:'12345', name:'Hello World!' }};
-        var ctrl = $componentController('greetingDetail', null, bindings);
+        var ctrl = $componentController('greeting', null, bindings);
 
         expect(ctrl.greeting).toBeDefined();
         expect(ctrl.greeting.id).toBe('12345');

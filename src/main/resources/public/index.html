@@ -3,7 +3,7 @@
 <head>
     <title>Our Wedding</title>
     <link href="bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
-    <link href="wedding/css/wedding.css" rel="stylesheet">
+    <link href="wedding/content/css/wedding.css" rel="stylesheet">
     <style type="text/css">
         [ng\:cloak], [ng-cloak], .ng-cloak {
             display: none !important;
@@ -13,7 +13,7 @@
 
 <body ng-app="weddingApp">
 
-<div ng-controller="navigation" class="container">
+<div ng-controller="login" class="container">
     <ul class="nav nav-pills" role="tablist">
         <li class="active"><a href="#/">Greeting</a></li>
         <li><a href="#/login">Login</a></li>
@@ -29,6 +29,7 @@
 <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="wedding/app.js"></script>
 <script src="wedding/navigation/navigation.js"></script>
+<script src="wedding/login/login.js"></script>
 <script src="wedding/greeting/greeting.js"></script>
 </body>
 </html>
