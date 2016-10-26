@@ -1,8 +1,7 @@
 angular.module('weddingApp', [ 'ngRoute' ])
     .config(function($routeProvider, $httpProvider) {
         $routeProvider.when('/', {
-            templateUrl : 'wedding/greeting/greeting.html',
-            controller : 'greeting as ctrl'
+            templateUrl : 'wedding/route/home.html'
         }).when('/login', {
             templateUrl : 'wedding/login/login.html',
             controller : 'login'
