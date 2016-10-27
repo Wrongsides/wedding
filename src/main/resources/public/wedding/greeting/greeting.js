@@ -1,7 +1,7 @@
 function GreetingController($http){
     var ctrl = this;
     ctrl.greeting = {};
-    $http.get("/api/greeting") .success(function(response) {
+    $http.get("/api/greeting").success(function(response) {
         ctrl.greeting = response;
     });
 }
