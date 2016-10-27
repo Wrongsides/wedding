@@ -9,10 +9,16 @@
             display: none !important;
         }
     </style>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-route/angular-route.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="wedding/app.js"></script>
+    <script src="wedding/route/route.js"></script>
+    <script src="wedding/login/login.js"></script>
+    <script src="wedding/greeting/greeting.js"></script>
 </head>
-
 <body ng-app="weddingApp">
-
 <div ng-controller="login" class="container">
     <ul class="nav nav-pills" role="tablist">
         <li class="active"><a href="#/">Greeting</a></li>
@@ -20,16 +26,6 @@
         <li ng-show="authenticated"><a href="" ng-click="logout()">Logout</a></li>
     </ul>
 </div>
-
 <div ng-view class="container"></div>
-
-<script src="bower_components/jquery/dist/jquery.min.js"></script>
-<script src="bower_components/angular/angular.min.js"></script>
-<script src="bower_components/angular-route/angular-route.min.js"></script>
-<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-<script src="wedding/app.js"></script>
-<script src="wedding/navigation/navigation.js"></script>
-<script src="wedding/login/login.js"></script>
-<script src="wedding/greeting/greeting.js"></script>
 </body>
 </html>

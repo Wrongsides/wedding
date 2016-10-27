@@ -1,12 +1,2 @@
-<div class="jumbotron text-center">
-    <h1>John & Jane</h1>
-    <h2>...we are getting married!</h2>
-</div>
-
-<div ng-show="authenticated">
-    <p>The ID is {{ctrl.greeting.id}}</p>
-    <p>The content is {{ctrl.greeting.content}}</p>
-</div>
-<div ng-show="!authenticated">
-    <p>Login to check the date</p>
-</div>
+<p>The ID is {{$ctrl.greeting.id}}</p>
+<p>The content is {{$ctrl.greeting.content}}</p>
