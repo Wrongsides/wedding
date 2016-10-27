@@ -11,13 +11,13 @@ describe('component: greetingDetail', function() {
     it('should expose a `greeting` object', function() {
 
         $httpBackend.when('GET', '/api/greeting')
-            .respond({ greeting: { id:'12345', content:'Hello World!' }});
+            .respond({ id:'12345', content:'Hello World!' });
 
         var ctrl = $componentController('greeting', $httpBackend);
         $httpBackend.flush();
 
-        expect(ctrl.greeting.greeting).toBeDefined();
-        expect(ctrl.greeting.greeting.id).toBe('12345');
-        expect(ctrl.greeting.greeting.content).toBe('Hello World!');
+        expect(ctrl.greeting).toBeDefined();
+        expect(ctrl.greeting.id).toBe('12345');
+        expect(ctrl.greeting.content).toBe('Hello World!');
     });
 });
